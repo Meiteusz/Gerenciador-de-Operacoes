@@ -1,0 +1,6 @@
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Entities\bin\Debug\Entities.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Entities\bin\Debug\Entities.pdb
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Entities\obj\Debug\Entities.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Entities\obj\Debug\Entities.pdb

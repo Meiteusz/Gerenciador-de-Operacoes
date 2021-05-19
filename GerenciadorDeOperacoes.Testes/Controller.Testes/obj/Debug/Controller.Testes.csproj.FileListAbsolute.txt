@@ -1,0 +1,14 @@
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Controller.Testes.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Controller.Testes.pdb
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\obj\Debug\Controller.Testes.csprojAssemblyReference.cache
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\obj\Debug\Controller.Testes.csproj.CoreCompileInputs.cache
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\obj\Debug\Controller.Testes.csproj.CopyComplete
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\obj\Debug\Controller.Testes.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\obj\Debug\Controller.Testes.pdb
