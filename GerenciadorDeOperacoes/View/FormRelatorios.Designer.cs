@@ -138,9 +138,8 @@ namespace GerenciadorDeOperacoes
             this.lblValorTaxas.ForeColor = System.Drawing.Color.White;
             this.lblValorTaxas.Location = new System.Drawing.Point(342, 29);
             this.lblValorTaxas.Name = "lblValorTaxas";
-            this.lblValorTaxas.Size = new System.Drawing.Size(46, 21);
+            this.lblValorTaxas.Size = new System.Drawing.Size(0, 21);
             this.lblValorTaxas.TabIndex = 4;
-            this.lblValorTaxas.Text = "Valor";
             // 
             // label3
             // 
@@ -160,9 +159,8 @@ namespace GerenciadorDeOperacoes
             this.lblValorOperacoes.ForeColor = System.Drawing.Color.White;
             this.lblValorOperacoes.Location = new System.Drawing.Point(148, 29);
             this.lblValorOperacoes.Name = "lblValorOperacoes";
-            this.lblValorOperacoes.Size = new System.Drawing.Size(46, 21);
+            this.lblValorOperacoes.Size = new System.Drawing.Size(0, 21);
             this.lblValorOperacoes.TabIndex = 2;
-            this.lblValorOperacoes.Text = "Valor";
             // 
             // label1
             // 

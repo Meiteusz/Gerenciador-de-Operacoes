@@ -6,6 +6,8 @@ namespace Helper
 {
     public static class FormsHelper
     {
+        // Classe feita para evitar a repetição de código nos controles dos forms
+
         public static void MudarForm(Form FormAtual, Form FormDesejado)
         {
             FormAtual.Hide();

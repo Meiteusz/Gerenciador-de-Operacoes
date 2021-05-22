@@ -42,5 +42,10 @@ namespace Controller
         {
             return dalmoedas.ListarMoedasCadastradas();
         }
+
+        public bool isQuantidadeMoedasValido()
+        {
+            return dalmoedas.VerificarQuantidadeMoedasCadastradas();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Helper;
+﻿using Controller;
+using Helper;
 using System;
 using System.Windows.Forms;
 
@@ -10,7 +11,12 @@ namespace GerenciadorDeOperacoes
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+            btnCadastroOperacoes.Enabled = false;
+            if (moedasBLL.isQuantidadeMoedasValido())
+                btnCadastroOperacoes.Enabled = true;
         }
+
+        MoedasBLL moedasBLL = new MoedasBLL();
 
         private void btnCadastroMoedas_Click(object sender, EventArgs e)
         {

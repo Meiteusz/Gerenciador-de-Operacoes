@@ -5,6 +5,8 @@ namespace Model
 {
     public class Conexao
     {
+        //Classe de conexao que facilita a conexao e a desconexao com o banco, sem a necessidade de repetir a ConnectionString
+
         SqlConnection con = new SqlConnection();
 
         public Conexao()

@@ -114,5 +114,22 @@ namespace Model
             conexao.Desconectar();
             return ListaMoedas;
         }
+
+        public bool VerificarQuantidadeMoedasCadastradas()
+        {
+            int QtdMoedasCadastradas = 0;
+            SqlCommand command = new SqlCommand("select * from Moedas", conexao.Conectar());
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                QtdMoedasCadastradas++;
+            }
+            if (QtdMoedasCadastradas < 2)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

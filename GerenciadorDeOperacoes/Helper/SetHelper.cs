@@ -5,6 +5,8 @@ namespace Helper
 {
     public static class SetHelper
     {
+        //Classe feita para Setar uma Moeda ou Operacao específica para uso dos dados dos mesmos
+
         public static OperacaoCambio OperacaoSelecionada { get; private set; }
         public static Moeda MoedaSelecionada { get; private set; }
 
