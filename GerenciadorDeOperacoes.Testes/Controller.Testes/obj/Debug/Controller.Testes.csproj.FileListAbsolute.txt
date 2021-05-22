@@ -12,3 +12,9 @@ D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Co
 D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\obj\Debug\Controller.Testes.csproj.CopyComplete
 D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\obj\Debug\Controller.Testes.dll
 D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\obj\Debug\Controller.Testes.pdb
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Controller.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Entities.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Model.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Controller.pdb
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Entities.pdb
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes.Testes\Controller.Testes\bin\Debug\Model.pdb

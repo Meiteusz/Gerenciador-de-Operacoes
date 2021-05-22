@@ -51,19 +51,21 @@ namespace GerenciadorDeOperacoes
         private void FormCadastroMoeda_Load(object sender, EventArgs e)
         {
             dgvMoedas.Columns["Id"].Width = 50;
-            dgvMoedas.Columns["Moeda"].Width = 200;
+            dgvMoedas.Columns["Moeda"].Width = 150;
             dgvMoedas.Columns["Simbolo"].Width = 60;
             dgvMoedas.Columns["Valor_Conversao"].Width = 110;
         }
 
         private void dgvMoedas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            lblDica.Visible = false;
             btnAtualizarValor.Enabled = true;
             Moeda moeda = new Moeda();
             moeda.Id = (int)dgvMoedas.CurrentRow.Cells[0].Value;
             moeda.TipoMoeda = string.Empty;
             SetHelper.SetarMoeda(moeda);
 
+            cmbMoedas.Text = SetHelper.MoedaSelecionada.TipoMoeda;
             txtSimbolo.Text = SetHelper.MoedaSelecionada.Simbolo;
             txtValorConversao.Value = (decimal)SetHelper.MoedaSelecionada.ValorConversao;
         }

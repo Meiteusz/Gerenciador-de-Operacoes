@@ -64,6 +64,12 @@
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRelatorioDetalhado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelatorioDetalhado.Designer.cs">
+      <DependentUpon>FormRelatorioDetalhado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRelatorios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRelatorioDetalhado.resx">
+      <DependentUpon>FormRelatorioDetalhado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRelatorios.resx">
       <DependentUpon>FormRelatorios.cs</DependentUpon>

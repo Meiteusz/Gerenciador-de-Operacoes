@@ -2,7 +2,6 @@
 using Model;
 using System;
 using System.Data;
-using System.Windows.Forms;
 
 namespace Controller
 {
@@ -26,24 +25,19 @@ namespace Controller
             return resposta;
         }
 
-        public Valores PegarValorTotalOperacoesTaxas(string TipoMoeda)
+        public Valores PegarValorTotalOperacoesTaxas(string TipoMoeda, DateTime DataInicio, DateTime DataFinal)
         {
-            return dalOperacoes.PegarValorTotalOperacoesTaxas(TipoMoeda);
+            return dalOperacoes.PegarValorTotalOperacoesTaxas(TipoMoeda, DataInicio, DataFinal);
         }
 
-        public DataTable MostrarOperacoes()
+        public OperacaoCambio PegarValoresOperacao(int idOperacao)
         {
-            return dalOperacoes.MostrarOperacoes();
+            return dalOperacoes.PegarValoresOperacao(idOperacao);
         }
 
-        public DataTable FiltrarOperacoes(string NomeCliente, DateTime DataInicio, DateTime DataTermino)
+        public DataView FiltrarOperacoes(string NomeCliente, DateTime DataInicio, DateTime DataTermino)
         {
             return dalOperacoes.FiltrarOperacoes(NomeCliente, DataInicio, DataTermino);
-        }
-
-        public AutoCompleteStringCollection ListarNomesClientes()
-        {
-            return dalOperacoes.ListarNomesClientes();
         }
 
         public string ValidarOperacao(OperacaoCambio operacao)

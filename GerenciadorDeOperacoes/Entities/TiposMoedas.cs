@@ -5,13 +5,17 @@
         Real,
         Dolar_Americano,
         Euro,
-        Libra_Esterlina,
+        Libra,
         Iene,
         Dolar_Australiano,
         Franco_Suico,
         Dolar_Canadense,
-        Renminbi,
+        Yuan,
         Peso_Argentino,
+        Peso_Chileno,
+        Peso_Uruguaio,
+        Peso_Mexicano,
+        Peso_Colombiano,
         Lira_Turca
     }
 }

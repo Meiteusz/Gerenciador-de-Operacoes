@@ -2,7 +2,6 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace Model
 {
@@ -45,12 +44,15 @@ namespace Model
             return resposta;
         }
 
-        public Valores PegarValorTotalOperacoesTaxas(string p_TipoMoeda)
+        public Valores PegarValorTotalOperacoesTaxas(string p_TipoMoeda, DateTime p_DataInicio, DateTime p_DataFinal)
         {
             Valores valores = new Valores();
-            SqlCommand command = new SqlCommand("select SUM(Valor_Original) as Total_Operacoes, SUM(Taxa_Cobrada) as Total_Taxas from Operacoes as Valor_Total where Moeda_Origem = @TipoMoeda", conexao.Conectar());
+            SqlCommand command = new SqlCommand("select SUM(Valor_Original) as Total_Operacoes, SUM(Taxa_Cobrada) as Total_Taxas from Operacoes as Valor_Total where " +
+                "Moeda_Origem = @TipoMoeda and Convert(date, Data_Operacao) between @DataInicio and @DataFinal", conexao.Conectar());
             command.Parameters.Clear();
             command.Parameters.AddWithValue("@TipoMoeda", p_TipoMoeda);
+            command.Parameters.AddWithValue("@DataInicio", p_DataInicio);
+            command.Parameters.AddWithValue("@DataFinal", p_DataFinal);
             SqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
@@ -72,45 +74,41 @@ namespace Model
             return valores;
         }
 
-        public DataTable MostrarOperacoes()
+        // Pega os valores de uma operacao especifica pelo Id
+        public OperacaoCambio PegarValoresOperacao(int p_idOperacao)
         {
-            DataTable dt = new DataTable();
-            SqlCommand command = new SqlCommand("select Id, Cliente_Nome, Moeda_Origem, Moeda_Destino, FORMAT(Data_Operacao, 'dd/MM/yyyy') as Data_Operacao, " +
-                "Valor_Original, Valor_Convertido, Taxa_Cobrada as Taxa from Operacoes", conexao.Conectar());
-            adapter = new SqlDataAdapter(command);
-            adapter.Fill(dt);
-            conexao.Desconectar();
-            return dt;
-        }
-
-        public DataTable FiltrarOperacoes(string p_NomeCliente, DateTime p_DataInicio, DateTime p_DataTermino)
-        {
-            DataTable dt = new DataTable();
-            command = new SqlCommand("select Id, Cliente_Nome, Moeda_Origem, Moeda_Destino, FORMAT(Data_Operacao, 'dd/MM/yyyy') as Data_Operacao, Valor_Original, " +
-                "Valor_Convertido, FORMAT(Taxa_Cobrada,  'c', 'pt-br') as Taxa_BRL from Operacoes where Cliente_Nome = @NomeCliente or " +
-                "Convert(date, Data_Operacao) between @DataInicio and @DataTermino", conexao.Conectar());
+            OperacaoCambio operacao = new OperacaoCambio();
+            SqlCommand command = new SqlCommand("select * from Operacoes where Id = @IdOperacao", conexao.Conectar());
             command.Parameters.Clear();
-            command.Parameters.AddWithValue("@NomeCliente", p_NomeCliente);
-            command.Parameters.AddWithValue("@DataInicio", p_DataInicio);
-            command.Parameters.AddWithValue("@DataTermino", p_DataTermino);
-            adapter = new SqlDataAdapter(command);
-            adapter.Fill(dt);
-            conexao.Desconectar();
-            return dt;
-        }
-
-        public AutoCompleteStringCollection ListarNomesClientes()
-        {
-            AutoCompleteStringCollection AutoComplete = new AutoCompleteStringCollection();
-            SqlCommand command = new SqlCommand("select Cliente_Nome from Operacoes", conexao.Conectar());
+            command.Parameters.AddWithValue("@IdOperacao", p_idOperacao);
             SqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
-                AutoComplete.Add(reader["Cliente_Nome"].ToString());
+                operacao.Id = (int)reader["Id"];
+                operacao.NomeCliente = reader["Cliente_Nome"].ToString();
+                operacao.MoedaOrigem = reader["Moeda_Origem"].ToString();
+                operacao.MoedaDestino = reader["Moeda_Destino"].ToString();
+                operacao.DataOperacao = Convert.ToDateTime(reader["Data_Operacao"]);
+                operacao.ValorOriginal = Convert.ToDouble(reader["Valor_Original"]);
+                operacao.ValorConvertido = Convert.ToDouble(reader["Valor_Convertido"]);
+                operacao.TaxaCobrada = Convert.ToDouble(reader["Taxa_Cobrada"]);
             }
             conexao.Desconectar();
-            return AutoComplete;
+            return operacao;
+        }
+
+        public DataView FiltrarOperacoes(string p_NomeCliente, DateTime p_DataInicio, DateTime p_DataTermino)
+        {
+            DataTable dt = new DataTable();
+            command = new SqlCommand("select Id, Cliente_Nome, Moeda_Origem, Moeda_Destino, Data_Operacao, FORMAT(Valor_Original, 'N2') as Valor_Original, " +
+                   "FORMAT(Valor_Convertido, 'N2') as Valor_Convertido, FORMAT(Taxa_Cobrada , 'N2') as Taxa from Operacoes", conexao.Conectar());
+            adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+            DataView dv = new DataView(dt);
+            dv.RowFilter = string.Format("Cliente_Nome  Like '{0}%' and Data_Operacao >= '{1}' and Data_Operacao <= '{2}'", p_NomeCliente, p_DataInicio, p_DataTermino.AddDays(1)); //RowFilter não suporta between (addDays para compensar o between)
+            conexao.Desconectar();
+            return dv;
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Controller
 {
-    class Validator
+    public class Validator
     {
         Regex regexNome = new Regex(@"[A-Z][a-z].* [A-Z][a-z].*");
         

@@ -42,3 +42,4 @@ D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\View\obj\
 D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\View\obj\Debug\View.csproj.CopyComplete
 D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\View\obj\Debug\GerenciadorDeOperacoes.exe
 D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\View\obj\Debug\GerenciadorDeOperacoes.pdb
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\View\obj\Debug\GerenciadorDeOperacoes.FormRelatorioDetalhado.resources

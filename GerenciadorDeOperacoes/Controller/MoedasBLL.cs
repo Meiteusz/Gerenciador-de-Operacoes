@@ -28,6 +28,11 @@ namespace Controller
             return dalmoedas.Update(moeda);
         }
 
+        public Moeda PegarValorMoeda(Moeda moeda)
+        {
+            return dalmoedas.PegarValorMoeda(moeda);
+        }
+
         public DataTable MostrarMoedas()
         {
             return dalmoedas.PegarTodasMoedas();
@@ -36,11 +41,6 @@ namespace Controller
         public ArrayList ListarMoedasCadastradas()
         {
             return dalmoedas.ListarMoedasCadastradas();
-        }
-
-        public Moeda PegarValorMoeda(Moeda moeda)
-        {
-            return dalmoedas.PegarValorMoeda(moeda);
         }
     }
 }

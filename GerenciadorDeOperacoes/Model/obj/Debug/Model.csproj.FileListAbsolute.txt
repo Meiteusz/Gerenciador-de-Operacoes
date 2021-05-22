@@ -7,3 +7,12 @@ D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Model\obj\Debug\Model.csproj.Cor
 D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Model\obj\Debug\Model.csproj.CopyComplete
 D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Model\obj\Debug\Model.dll
 D:\VisualStudioWorkbench\GerenciadorDeOperacoes\Model\obj\Debug\Model.pdb
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\Model\bin\Debug\Model.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\Model\bin\Debug\Model.pdb
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\Model\bin\Debug\Entities.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\Model\bin\Debug\Entities.pdb
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\Model\obj\Debug\Model.csproj.CopyComplete
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\Model\obj\Debug\Model.dll
+D:\VisualStudioWorkbench\GerenciadorDeOperacoes\GerenciadorDeOperacoes\Model\obj\Debug\Model.pdb

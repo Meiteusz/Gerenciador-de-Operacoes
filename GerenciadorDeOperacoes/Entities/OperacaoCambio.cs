@@ -4,6 +4,7 @@ namespace Entities
 {
     public class OperacaoCambio
     {
+        public int Id { get; set; }
         public string NomeCliente { get; set; }
         public string MoedaOrigem { get; set; }
         public string MoedaDestino { get; set; }
@@ -11,6 +12,8 @@ namespace Entities
         public double ValorOriginal { get; set; }
         public double ValorConvertido { get; set; }
         public double TaxaCobrada { get; set; }
+
+        public OperacaoCambio() { }
 
         public OperacaoCambio(string p_NomeCliente, string p_MoedaOrigem, string p_MoedaDestino, DateTime p_DataOperacao, double p_ValorOriginal,
             double p_ValorConvertido, double p_TaxaCobrada)

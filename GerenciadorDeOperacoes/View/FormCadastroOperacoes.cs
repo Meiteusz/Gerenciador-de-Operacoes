@@ -26,7 +26,7 @@ namespace GerenciadorDeOperacoes
             OperacaoCambio operacao = new OperacaoCambio(txtNomeCliente.Text, cmbMoedaOrigem.Text, cmbMoedaDestino.Text, dtpData.Value,
                 (double)txtValorOriginal.Value, calculadora.ValorConvertido, (double)(txtValorOriginal.Value * txtTaxaCobrada.Value) / 100);
 
-            Response resposta =  operacoesBLL.CadastrarOperacao(operacao);
+            Response resposta = operacoesBLL.CadastrarOperacao(operacao);
             MessageBox.Show(resposta.Mensagem, "Atenção!");
         }
 
@@ -38,16 +38,40 @@ namespace GerenciadorDeOperacoes
 
         private void txtValorOriginal_ValueChanged(object sender, EventArgs e)
         {
-            calculadora.ConverterValor(cmbMoedaOrigem.Text, cmbMoedaDestino.Text, (double)txtValorOriginal.Value);
-            Moeda moeda = new Moeda();
-            moeda.TipoMoeda = cmbMoedaDestino.Text;
-            SetHelper.SetarMoeda(moeda);
-            lblValorConvertido.Text = SetHelper.MoedaSelecionada.Simbolo + calculadora.ValorConvertido.ToString("N2");
+            ConverterValor();
+        }
+
+        private void cmbMoedaOrigem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ConverterValor();
+        }
+
+        private void cmbMoedaDestino_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ConverterValor();
+        }
+
+        private void btnReverter_Click(object sender, EventArgs e)
+        {
+            string MoedaOrigem = cmbMoedaOrigem.Text;
+            cmbMoedaOrigem.Text = cmbMoedaDestino.Text;
+            cmbMoedaDestino.Text = MoedaOrigem;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             FormsHelper.MudarForm(this, new FormInicio());
+        }
+
+        private void ConverterValor()
+        {
+            calculadora.ConverterValor(cmbMoedaOrigem.Text, cmbMoedaDestino.Text, (double)txtValorOriginal.Value);
+            SetHelper.SetarMoeda(new Moeda()
+            {
+                TipoMoeda = cmbMoedaDestino.Text
+            });
+            lblValorConvertido.Text = calculadora.ValorConvertido.ToString();
+            lblSimboloDestino.Text = SetHelper.MoedaSelecionada.Simbolo;
         }
     }
 }
