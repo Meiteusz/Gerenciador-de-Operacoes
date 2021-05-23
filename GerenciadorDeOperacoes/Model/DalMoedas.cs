@@ -33,7 +33,7 @@ namespace Model
             {
                 resposta.Sucesso = false;
                 if (ex.Number.Equals(2627))
-                    resposta.Mensagem = "Esta moeda já está cadastrada!";
+                    resposta.Mensagem = "Esta moeda já está cadastrada";
                 else
                     resposta.Mensagem = "Erro com o Banco de Dados\n" + ex.Message;
             }
