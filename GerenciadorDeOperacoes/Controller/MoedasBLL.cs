@@ -11,12 +11,12 @@ namespace Controller
 
         public Response CadastrarMoeda(Moeda moeda)
         {
-            if (moeda.ValorConversao.Equals(0))
+            if (moeda.ValorConversao.Equals(0) || moeda.Simbolo.Equals(string.Empty))
             {
                 Response resposta = new Response
                 {
                     Sucesso = false,
-                    Mensagem = "Valor inválido!"
+                    Mensagem = "Valor ou símbolo inválidos!"
                 };
                 return resposta;
             }

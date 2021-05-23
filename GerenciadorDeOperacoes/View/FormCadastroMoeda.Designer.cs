@@ -204,7 +204,7 @@ namespace GerenciadorDeOperacoes
             this.btnAtualizarValor.Name = "btnAtualizarValor";
             this.btnAtualizarValor.Size = new System.Drawing.Size(160, 70);
             this.btnAtualizarValor.TabIndex = 6;
-            this.btnAtualizarValor.Text = "Atualizar Valor";
+            this.btnAtualizarValor.Text = "Atualizar Moeda";
             this.btnAtualizarValor.UseVisualStyleBackColor = false;
             this.btnAtualizarValor.Click += new System.EventHandler(this.btnAtualizarValor_Click);
             // 
