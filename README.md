@@ -38,9 +38,12 @@
 <img src="https://github.com/Meiteusz/Gerenciador-de-Operacoes/blob/main/images/CadastroDeOperacao.gif" width="700">
 
 - Após cadastrar uma operação, volte para a tela inicial e clique no botão **Relatórios** para visualizar e filtrar todas as Operaçoes de Câmbio
+
+<img src="https://github.com/Meiteusz/Gerenciador-de-Operacoes/blob/main/images/PesquisaDeOperacao.gif" width="710"> 
+
 - Clique na célula da operação desejada e clique no botão **Visualizar** para ver os detalhes da operação
 
-<img src="https://github.com/Meiteusz/Gerenciador-de-Operacoes/blob/main/images/PesquisaDeOperacao.gif" width="710"> <img src="https://github.com/Meiteusz/Gerenciador-de-Operacoes/blob/main/images/DetalhesOperacao.png" align="top" width="250">
+<img src="https://github.com/Meiteusz/Gerenciador-de-Operacoes/blob/main/images/DetalhesOperacao.png" align="top" width="250">
 
 - Clique no botão Ok para voltar a tela de visualização de todas as operações
 
